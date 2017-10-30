@@ -244,26 +244,44 @@ public class LiterCalculator {
 			teaspoons = (int) Math.round((inputInDrops/118.38776042) % 48);
 			cups = (int) Math.round((inputInDrops/(118.38776042*48)));
 		
-		/*
-		 * if unit system USA is checked, do the following code
-		 */
+	
 			
-			
+			/* If Checkobxes are enabled - but doesn't work yet!*/
 		/*	if(chckbxCups.isSelected()) {
-				cups = (int) Math.round(1/0.5);
+				cups = (int) Math.round(liter*3.51951);
 			}
-			else if(chckbxTeaspoons.isSelected()) {
-						
+			else if(chckbxCups.isSelected() && chckbxTeaspoons.isSelected()) {
+				teaspoons = (int) Math.round(liter*168.936);
+				cups = (int) Math.round((liter*168.936)%48);
 			}
-			else if(chckbxDrops.isSelected()) {
+			else if(chckbxCups.isSelected() && chckbxDrops.isSelected()) {
 				
 			}
+			
+			
+			else if(chckbxTeaspoons.isSelected()) {
+				teaspoons = (int) Math.round(liter*168.936);	
+			}
+			else if(chckbxTeaspoons.isSelected() && chckbxDrops.isSelected()) {
+				
+			}
+			
+			
+			else if(chckbxDrops.isSelected()) {
+				return inputInDrops;	
+			}
+			
 			else {
-				System.out.println("Geht nicht!");
+				System.out.println("Fehler!");
 			}
 
 			*/
 			
+			
+			
+			/*
+			 * if unit system USA is checked, do the following code
+			 */
 		} else if (rdbtnUs.isSelected()) {
 			// calculate bottom up from drops to cups
 			drops = (int) Math.round(inputInDrops % 118.38776042);
