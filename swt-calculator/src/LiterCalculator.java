@@ -227,7 +227,7 @@ public class LiterCalculator {
 		 * 1l = 20000 drops
 		 * 1 teaspoon = 118.38776042 drops
 		 * 1 cup = 48 teaspoon
-		 * 
+		 * 1 cup = 2878.68 drops
 		 * ==== US ====
 		 * 1l = 20000 drops
 		 * 1 teaspoon = 98.578431875 drops
@@ -246,16 +246,17 @@ public class LiterCalculator {
 		
 	
 			
-			/* If Checkobxes are enabled - but doesn't work yet!*/
+			/* If Checkboxes are enabled - but doesn't work yet!*/
 		/*	if(chckbxCups.isSelected()) {
 				cups = (int) Math.round(liter*3.51951);
 			}
 			else if(chckbxCups.isSelected() && chckbxTeaspoons.isSelected()) {
 				teaspoons = (int) Math.round(liter*168.936);
-				cups = (int) Math.round((liter*168.936)%48);
+				cups = (int) Math.round((liter*168.936)/48);
 			}
 			else if(chckbxCups.isSelected() && chckbxDrops.isSelected()) {
-				
+				drops = (int) Math.round(inputInDrops%2878.68)
+				cups = (int) Math.round(inputInDrops/2878.68)
 			}
 			
 			
@@ -263,7 +264,8 @@ public class LiterCalculator {
 				teaspoons = (int) Math.round(liter*168.936);	
 			}
 			else if(chckbxTeaspoons.isSelected() && chckbxDrops.isSelected()) {
-				
+				drops = (int) Math.round(inputInDrops % 118.38776042);
+				teaspoons = (int) Math.round(inputInDrops/118.38776042);
 			}
 			
 			
