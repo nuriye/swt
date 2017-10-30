@@ -232,7 +232,7 @@ public class LiterCalculator {
 		 * 1l = 20000 drops
 		 * 1 teaspoon = 98.578431875 drops
 		 * 1 cup = 48 teaspoon
-		 * 
+		 * 1 cup = 4608 drops
 		 */
 		
 		/*
@@ -264,7 +264,7 @@ public class LiterCalculator {
 				teaspoons = (int) Math.round(liter*168.936);	
 			}
 			else if(chckbxTeaspoons.isSelected() && chckbxDrops.isSelected()) {
-				drops = (int) Math.round(inputInDrops % 118.38776042);
+				drops = (int) Math.round(inputInDrops%118.38776042);
 				teaspoons = (int) Math.round(inputInDrops/118.38776042);
 			}
 			
@@ -286,9 +286,45 @@ public class LiterCalculator {
 			 */
 		} else if (rdbtnUs.isSelected()) {
 			// calculate bottom up from drops to cups
-			drops = (int) Math.round(inputInDrops % 118.38776042);
+			drops = (int) Math.round(inputInDrops % 98.578431875);
 			teaspoons = (int) Math.round((inputInDrops/98.578431875) % 48);
 			cups = (int) Math.round((inputInDrops/(98.578431875*48)));
+			
+
+			/* If Checkboxes are enabled - but doesn't work yet!*/
+			
+		/*	if(chckbxCups.isSelected()) {
+				cups = (int) Math.round(liter*4.22675);
+			}
+			else if(chckbxCups.isSelected() && chckbxTeaspoons.isSelected()) {
+				teaspoons = (int) Math.round((liter*202.884)%48);
+				cups = (int) Math.round((liter*202.884)/48);
+			}
+			else if(chckbxCups.isSelected() && chckbxDrops.isSelected()) {
+				drops = (int) Math.round(inputInDrops%4608)
+				cups = (int) Math.round(inputInDrops/4608)
+			}
+			
+			
+			else if(chckbxTeaspoons.isSelected()) {
+				teaspoons = (int) Math.round(liter*202.884);	
+			}
+			else if(chckbxTeaspoons.isSelected() && chckbxDrops.isSelected()) {
+				drops = (int) Math.round(inputInDrops % 98.578431875);
+				teaspoons = (int) Math.round(inputInDrops/98.578431875);
+			}
+			
+			
+			else if(chckbxDrops.isSelected()) {
+				return inputInDrops;	
+			}
+			
+			else {
+				System.out.println("Fehler!");
+			}
+
+			*/
+			
 			
 		} else {
 			System.out.println("Bitte ein Einheitensystem wählen!");
