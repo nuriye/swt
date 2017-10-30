@@ -239,15 +239,21 @@ public class LiterCalculator {
 		 * if unit system UK is checked, do the following code
 		 */
 		if (rdbtnUk.isSelected()) {
+			/* When everything is selected or nothing is selected*/
+			/*if (chckbxCups.isSelected() && chckbxTeaspoons.isSelected() && chckbxDrops.isSelected()
+					||
+				!chckbxCups.isSelected() && !chckbxTeaspoons.isSelected() && !chckbxDrops.isSelected()) 
+			{*/
 			// calculate bottom up from drops to cups
-			drops = (int) Math.round(inputInDrops % 118.38776042);
-			teaspoons = (int) Math.round((inputInDrops/118.38776042) % 48);
-			cups = (int) Math.round((inputInDrops/(118.38776042*48)));
+				drops = (int) Math.round(inputInDrops % 118.38776042);
+				teaspoons = (int) Math.round((inputInDrops/118.38776042) % 48);
+				cups = (int) Math.round((inputInDrops/(118.38776042*48)));
+			/*}*/
 		
 	
 			
 			/* If Checkboxes are enabled - but doesn't work yet!*/
-		/*	if(chckbxCups.isSelected()) {
+		/*	else if(chckbxCups.isSelected()) {
 				cups = (int) Math.round(liter*3.51951);
 			}
 			else if(chckbxCups.isSelected() && chckbxTeaspoons.isSelected()) {
@@ -285,6 +291,11 @@ public class LiterCalculator {
 			 * if unit system USA is checked, do the following code
 			 */
 		} else if (rdbtnUs.isSelected()) {
+			/* When everything is selected or nothing is selected*/
+			/*if (chckbxCups.isSelected() && chckbxTeaspoons.isSelected() && chckbxDrops.isSelected()
+					||
+				!chckbxCups.isSelected() && !chckbxTeaspoons.isSelected() && !chckbxDrops.isSelected()) 
+			{*/
 			// calculate bottom up from drops to cups
 			drops = (int) Math.round(inputInDrops % 98.578431875);
 			teaspoons = (int) Math.round((inputInDrops/98.578431875) % 48);
