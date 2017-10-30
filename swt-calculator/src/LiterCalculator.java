@@ -31,6 +31,10 @@ public class LiterCalculator {
 	private JRadioButton rdbtnUk;
 	private JRadioButton rdbtnUs;
 	private JButton btnBerechnen;
+	
+	private JCheckBox chckbxCups;
+	private JCheckBox chckbxTeaspoons;
+	private JCheckBox chckbxDrops;
 
 	/**
 	 * Launch the application.
@@ -236,24 +240,41 @@ public class LiterCalculator {
 		 */
 		if (rdbtnUk.isSelected()) {
 			// calculate bottom up from drops to cups
-			drops = inputInDrops % 118.38776042;
-			teaspoons = (inputInDrops/118.38776042) % 48;
-			cups = (inputInDrops/(118.38776042*48));
+			drops = (int) Math.round(inputInDrops % 118.38776042);
+			teaspoons = (int) Math.round((inputInDrops/118.38776042) % 48);
+			cups = (int) Math.round((inputInDrops/(118.38776042*48)));
 		
 		/*
 		 * if unit system USA is checked, do the following code
 		 */
+			
+			
+		/*	if(chckbxCups.isSelected()) {
+				cups = (int) Math.round(1/0.5);
+			}
+			else if(chckbxTeaspoons.isSelected()) {
+						
+			}
+			else if(chckbxDrops.isSelected()) {
+				
+			}
+			else {
+				System.out.println("Geht nicht!");
+			}
+
+			*/
+			
 		} else if (rdbtnUs.isSelected()) {
 			// calculate bottom up from drops to cups
-			drops = inputInDrops % 118.38776042;
-			teaspoons = (inputInDrops/98.578431875) % 48;
-			cups = (inputInDrops/(98.578431875*48));
+			drops = (int) Math.round(inputInDrops % 118.38776042);
+			teaspoons = (int) Math.round((inputInDrops/98.578431875) % 48);
+			cups = (int) Math.round((inputInDrops/(98.578431875*48)));
 			
 		} else {
 			System.out.println("Bitte ein Einheitensystem wählen!");
 		}
 		
-		
+		/*
 		String dropsToString = String.valueOf(drops);
 		String teaspoonsToString = String.valueOf(teaspoons);
 		String cupsToString = String.valueOf(cups);
@@ -261,6 +282,12 @@ public class LiterCalculator {
 		outputFieldDrops.setText(String.valueOf(dropsToString));
 		outputFieldTeaspoons.setText(String.valueOf(teaspoonsToString));
 		outputFieldCups.setText(cupsToString);
+		*/
+		
+		//format long nimmt das .0 weg!
+		outputFieldDrops.setText(String.format("%d",(long)drops));
+		outputFieldTeaspoons.setText(String.format("%d",(long)teaspoons));
+		outputFieldCups.setText(String.format("%d",(long)cups));
 
 
 		
