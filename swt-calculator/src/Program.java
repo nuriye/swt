@@ -79,13 +79,13 @@ public class Program {
 		
 		// unit block
 		JLabel lblWelcheEinheitenSollen = new JLabel("In eine einzelne Einheit umrechnen (gerundet)?");
-		unitGroup = new ButtonGroup();
+		//unitGroup = new ButtonGroup();
 		cbCups = new JCheckBox("Cups");
 		cbTeaspoons = new JCheckBox("Teaspoons");
 		cbDrops = new JCheckBox("Drops");
-		unitGroup.add(cbCups);
-		unitGroup.add(cbTeaspoons);
-		unitGroup.add(cbDrops);
+		//unitGroup.add(cbCups);
+		//unitGroup.add(cbTeaspoons);
+		//unitGroup.add(cbDrops);
 
 		
 		// result block
