@@ -166,7 +166,7 @@ public class Program {
 		        		outputFieldTeaspoons.setText(String.format("%d",(long)teaspoons));
 		        		outputFieldDrops.setText(String.format("%d",(long)drops));
 		        		
-		        		unitGroup.clearSelection();
+		        		//unitGroup.clearSelection();
 		        		
 	            	} catch (NumberFormatException e) {
 	            		// TODO Anzeige der Fehlermeldung in JFrame frame

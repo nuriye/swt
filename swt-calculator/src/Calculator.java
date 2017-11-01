@@ -61,32 +61,32 @@ public class Calculator {
 		if (unitSystemUk && inCups == false && inTeaspoons == false && inDrops == false) {
     		System.out.println("Du möchtest UK all berechnen");
     		calcAllUk();
-		}  else if (unitSystemUk && inCups == true && inTeaspoons == true && inDrops == true) {
+		}  else if (unitSystemUk && inCups && inTeaspoons && inDrops) {
     		System.out.println("Du möchtest UK all berechnen");
     		calcAllUk(); 
     	} 
 		// If Cups TRUE
-		else if (unitSystemUk && inCups == true && inTeaspoons == false && inDrops == false) {
+		else if (unitSystemUk && inCups && inTeaspoons == false && inDrops == false) {
 			System.out.println("Du möchtest UK Cups berechnen");
 			calcCupsUk();
 		} 
 		// If Cups & Tsp TRUE
-		else if (unitSystemUk && inCups == true && inTeaspoons == true && inDrops == false) {
+		else if (unitSystemUk && inCups && inTeaspoons && inDrops == false) {
     		System.out.println("Du möchtest UK Cups und Teaspoons berechnen");
     		calcCupsTspUk();
 		} 
 		// IF Cups & Drops
-		else if (unitSystemUk && inCups == true && inTeaspoons == false && inDrops == true) {
+		else if (unitSystemUk && inCups && inTeaspoons == false && inDrops) {
     		System.out.println("Du möchtest UK Cups und Drops berechnen");
     		calcCupsDropsUk();
 		} 
 		//If Tsp TRUE
-		else if (unitSystemUk && inTeaspoons == true && inCups == false && inDrops == false) {
+		else if (unitSystemUk && inTeaspoons && inCups == false && inDrops == false) {
 			System.out.println("Du möchtest UK Teaspoons berechnen");
 			calcTeaspoonsUk();
 		} 
 		// If Tsp & Drops TRUE
-		else if (unitSystemUk && inTeaspoons == true && inCups == false && inDrops == true) {
+		else if (unitSystemUk && inTeaspoons && inCups == false && inDrops) {
 			System.out.println("Du möchtest UK Teaspoons und Drops berechnen");
 			calcTspDrpsUk();
 		} 
@@ -97,40 +97,40 @@ public class Calculator {
 		    System.out.println("Du möchtest US all berechnen");
 		    calcAllUs();
 		}  
-		else if (unitSystemUs && inCups == true && inTeaspoons == true && inDrops == true) {
+		else if (unitSystemUs && inCups && inTeaspoons && inDrops) {
 		    System.out.println("Du möchtest US all berechnen");
 		    calcAllUs(); 
 		 } 
 		
 		// If Cups TRUE
-		else if (unitSystemUs && inCups == true && inTeaspoons == false && inDrops == false) {
+		else if (unitSystemUs && inCups && inTeaspoons == false && inDrops == false) {
 			System.out.println("Du möchtest US Cups berechnen");
 			calcCupsUs();
 		} 
 		// If Cups & Tsp TRUE
-		else if (unitSystemUs && inCups == true && inTeaspoons == true && inDrops == false) {
+		else if (unitSystemUs && inCups && inTeaspoons && inDrops == false) {
 		    System.out.println("Du möchtest US Cups und Teaspoons berechnen");
 		    calcCupsTspUs();
 		} 
 		// IF Cups & Drops
-		else if (unitSystemUs && inCups == true && inTeaspoons == false && inDrops == true) {
+		else if (unitSystemUs && inCups && inTeaspoons == false && inDrops) {
 		    System.out.println("Du möchtest US Cups und Drops berechnen");
 		    calcCupsDropsUs();
 		} 
 		//If Tsp TRUE
-		else if (unitSystemUs && inTeaspoons == true && inCups == false && inDrops == false) {
+		else if (unitSystemUs && inTeaspoons && inCups == false && inDrops == false) {
 			System.out.println("Du möchtest US Teaspoons berechnen");
 			calcTeaspoonsUs();
 		} 
 		// If Tsp & Drops TRUE
-		else if (unitSystemUs && inTeaspoons == true && inCups == false && inDrops == true) {
+		else if (unitSystemUs && inTeaspoons && inCups == false && inDrops) {
 			System.out.println("Du möchtest US Teaspoons und Drops berechnen");
 			calcTspDrpsUs();
 		} 
 		
 		
 		//BOTH for DROPS
-		else if (inCups == false && inTeaspoons == false && inDrops == true) {
+		else if (inCups == false && inTeaspoons == false && inDrops) {
 			setDrops(getLiterInDrops());
 		}
 	}
@@ -157,8 +157,6 @@ public class Calculator {
 		setCups((getLiterInDrops()/(dropsInTeaspoonUk*teaspoonsInCup)));
 	}
 	
-	
-	
 	public void calcCupsTspUk() {
 		setTeaspoons((getLiterInDrops()/dropsInTeaspoonUk) % teaspoonsInCup);
 		setCups((getLiterInDrops()/(dropsInTeaspoonUk*teaspoonsInCup)));
@@ -169,7 +167,7 @@ public class Calculator {
 	}
 	public void calcCupsDropsUk() {
 		setDrops(getLiterInDrops() % dropsInCupUk);
-		setCups((getLiterInDrops()/(dropsInCupUk*teaspoonsInCup)));
+		setCups((getLiterInDrops()/dropsInCupUk));
 	}
 	
 	
@@ -207,7 +205,7 @@ public class Calculator {
 	}
 	public void calcCupsDropsUs() {
 		setDrops(getLiterInDrops() % dropsInCupUs);
-		setCups((getLiterInDrops()/(dropsInCupUs*teaspoonsInCup)));
+		setCups((getLiterInDrops()/(dropsInCupUs)));
 	}
 	
 
