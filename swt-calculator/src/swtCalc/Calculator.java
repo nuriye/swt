@@ -58,75 +58,60 @@ public class Calculator {
 		
 		//If All is true or ALL is FALSE
 		if (unitSystemUk && inCups == false && inTeaspoons == false && inDrops == false) {
-    		System.out.println("Du möchtest UK all berechnen");
     		calcAllUk();
 		}  else if (unitSystemUk && inCups && inTeaspoons && inDrops) {
-    		System.out.println("Du möchtest UK all berechnen");
     		calcAllUk(); 
     	} 
 		// If Cups TRUE
 		else if (unitSystemUk && inCups && inTeaspoons == false && inDrops == false) {
-			System.out.println("Du möchtest UK Cups berechnen");
 			calcCupsUk();
 		} 
 		// If Cups & Tsp TRUE
 		else if (unitSystemUk && inCups && inTeaspoons && inDrops == false) {
-    		System.out.println("Du möchtest UK Cups und Teaspoons berechnen");
     		calcCupsTspUk();
 		} 
 		// IF Cups & Drops
 		else if (unitSystemUk && inCups && inTeaspoons == false && inDrops) {
-    		System.out.println("Du möchtest UK Cups und Drops berechnen");
     		calcCupsDropsUk();
 		} 
 		//If Tsp TRUE
 		else if (unitSystemUk && inTeaspoons && inCups == false && inDrops == false) {
-			System.out.println("Du möchtest UK Teaspoons berechnen");
 			calcTeaspoonsUk();
 		} 
 		// If Tsp & Drops TRUE
 		else if (unitSystemUk && inTeaspoons && inCups == false && inDrops) {
-			System.out.println("Du möchtest UK Teaspoons und Drops berechnen");
 			calcTspDrpsUk();
 		} 
 		
 		//US
 		//If All is true or ALL is FALSE
 		else if (unitSystemUs && inCups == false && inTeaspoons == false && inDrops == false) {
-		    System.out.println("Du möchtest US all berechnen");
 		    calcAllUs();
 		}  
 		else if (unitSystemUs && inCups && inTeaspoons && inDrops) {
-		    System.out.println("Du möchtest US all berechnen");
 		    calcAllUs(); 
 		 } 
 		
 		// If Cups TRUE
 		else if (unitSystemUs && inCups && inTeaspoons == false && inDrops == false) {
-			System.out.println("Du möchtest US Cups berechnen");
 			calcCupsUs();
 		} 
 		// If Cups & Tsp TRUE
 		else if (unitSystemUs && inCups && inTeaspoons && inDrops == false) {
-		    System.out.println("Du möchtest US Cups und Teaspoons berechnen");
 		    calcCupsTspUs();
 		} 
 		// IF Cups & Drops
 		else if (unitSystemUs && inCups && inTeaspoons == false && inDrops) {
-		    System.out.println("Du möchtest US Cups und Drops berechnen");
 		    calcCupsDropsUs();
 		} 
 		//If Tsp TRUE
 		else if (unitSystemUs && inTeaspoons && inCups == false && inDrops == false) {
-			System.out.println("Du möchtest US Teaspoons berechnen");
 			calcTeaspoonsUs();
 		} 
 		// If Tsp & Drops TRUE
 		else if (unitSystemUs && inTeaspoons && inCups == false && inDrops) {
-			System.out.println("Du möchtest US Teaspoons und Drops berechnen");
 			calcTspDrpsUs();
 		} 
-		
 		
 		//BOTH for DROPS
 		else if (inCups == false && inTeaspoons == false && inDrops) {
